@@ -3,7 +3,7 @@ set -euo pipefail
 
 : "${RIFT_VM_HOST:?Set RIFT_VM_HOST, e.g. ubuntu@192.0.2.10.}"
 RIFT_DOMAIN="${RIFT_DOMAIN:-portal.example.test}"
-RIFT_REMOTE_DIR="${RIFT_REMOTE_DIR:-/opt/rift}"
+RIFT_REMOTE_DIR="${RIFT_REMOTE_DIR:-/home/ubuntu/rift}"
 RIFT_DEPLOY_MODE="${RIFT_DEPLOY_MODE:-backend}"
 
 SSH_KEY_ARGS=()

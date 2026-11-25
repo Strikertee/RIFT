@@ -113,9 +113,9 @@ Run these on the VM after SSH:
 
 ```bash
 bash /tmp/rift-bootstrap-vm.sh   # or run the commands in bootstrap-vm.sh
-sudo git clone -b master <REPO_URL> /opt/rift
-sudo chown -R ubuntu:ubuntu /opt/rift
-cd /opt/rift
+sudo git clone -b master <REPO_URL> /home/ubuntu/rift
+sudo chown -R ubuntu:ubuntu /home/ubuntu/rift
+cd /home/ubuntu/rift
 cp backend/deploy/.env.example .env
 ```
 

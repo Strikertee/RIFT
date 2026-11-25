@@ -4,7 +4,13 @@ set -eux
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get update
-apt-get install -y ca-certificates curl git openssl docker.io docker-compose-plugin
+
+compose_package="docker-compose-v2"
+if apt-cache show docker-compose-plugin >/dev/null 2>&1; then
+  compose_package="docker-compose-plugin"
+fi
+
+apt-get install -y ca-certificates curl git openssl docker.io "$compose_package"
 
 usermod -aG docker ubuntu || true
 

@@ -9,8 +9,14 @@ fi
 
 echo "Installing Docker and deployment tools..."
 $sudo_cmd apt-get update
+
+compose_package="docker-compose-v2"
+if apt-cache show docker-compose-plugin >/dev/null 2>&1; then
+  compose_package="docker-compose-plugin"
+fi
+
 $sudo_cmd DEBIAN_FRONTEND=noninteractive apt-get install -y \
-  ca-certificates curl git openssl docker.io docker-compose-plugin
+  ca-certificates curl git openssl docker.io "$compose_package"
 
 if ! command -v docker >/dev/null 2>&1; then
   echo "Docker was not found after installation." >&2

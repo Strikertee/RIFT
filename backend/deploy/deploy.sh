@@ -10,7 +10,7 @@ set -euo pipefail
 : "${RIFT_VM_HOST:?Set RIFT_VM_HOST, e.g. ubuntu@192.0.2.10.}"
 
 RIFT_BRANCH="${RIFT_BRANCH:-master}"
-RIFT_REMOTE_DIR="${RIFT_REMOTE_DIR:-/opt/rift}"
+RIFT_REMOTE_DIR="${RIFT_REMOTE_DIR:-/home/ubuntu/rift}"
 RIFT_DOMAIN="${RIFT_DOMAIN:-portal.example.test}"
 RIFT_ADMIN_EMAIL="${RIFT_ADMIN_EMAIL:-admin@example.test}"
 RIFT_DEPLOY_MODE="${RIFT_DEPLOY_MODE:-backend}"
@@ -35,7 +35,10 @@ scp_exec() {
 }
 
 echo "Bootstrapping VM tools..."
-scp_exec "$SCRIPT_DIR/bootstrap-vm.sh" "/tmp/rift-bootstrap-vm.sh"
+normalized_bootstrap="$(mktemp)"
+tr -d '\r' < "$SCRIPT_DIR/bootstrap-vm.sh" > "$normalized_bootstrap"
+scp_exec "$normalized_bootstrap" "/tmp/rift-bootstrap-vm.sh"
+rm -f "$normalized_bootstrap"
 ssh_exec "bash /tmp/rift-bootstrap-vm.sh"
 
 echo "Cloning or updating the repository..."
