@@ -42,7 +42,9 @@ def issue_allocation(
     if payload.amount_kobo > account.available_balance_kobo:
         raise ApiError(400, "INSUFFICIENT_FUNDS", "Available mock balance is insufficient.")
 
-    now = datetime.now(timezone.utc)
+    # The issuer signature binds second-precision timestamps; store the same
+    # truncated value so later OAC/ledger comparisons match byte-for-byte.
+    now = datetime.now(timezone.utc).replace(microsecond=0)
     expires = now + timedelta(hours=payload.duration_hours)
     oac_id = f"oac_{uuid.uuid4().hex}"
     unsigned = {
