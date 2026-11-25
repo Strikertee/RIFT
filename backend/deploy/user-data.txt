@@ -1,0 +1,14 @@
+#!/bin/bash
+set -eux
+
+export DEBIAN_FRONTEND=noninteractive
+
+apt-get update
+apt-get install -y ca-certificates curl git openssl docker.io docker-compose-plugin
+
+usermod -aG docker ubuntu || true
+
+docker --version
+docker compose version
+git --version
+openssl version

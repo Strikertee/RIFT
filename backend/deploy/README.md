@@ -25,6 +25,39 @@ Note: the kit mentions PostgreSQL 15, but Nobus currently documents managed Post
 
 ---
 
+## Nobus launch form — exact field mapping
+
+Use these values when the launch screen shows the fields below:
+
+| Field on screen | Value |
+| --- | --- |
+| Availability Zone | `nobus-wa-az1 (los1)` |
+| Instance Name | `rift-core-demo` |
+| Image | `Ubuntu-Linux-24` is fine; our Docker setup does not depend on Ubuntu 22.04 specifically |
+| Instance Type | `Standard Instances` |
+| Spec | Choose the smallest offered spec with at least 2 vCPU / 4 GB RAM / 20 GB disk |
+| Volume Size | `30` GB |
+| Keypair | Select `rift-nobus-key`; create it under **Compute → Keypairs** first if missing |
+| Recovery Password | Leave empty |
+| Instances Count | `1` |
+| Encrypt Disk | Leave default/off for the demo |
+| Network | Keep `inet-pub2` selected |
+| Network Port | Leave empty |
+| Security Groups | Select a custom `rift-demo-sg`, not just `default` |
+| User Data | Optional: upload/paste `backend/deploy/user-data.txt` |
+
+Why the custom security group: the default group usually does not allow SSH from your laptop. Add inbound rules for:
+
+- TCP `22`, remote `YOUR_IP/32`
+- TCP `80`, remote `0.0.0.0/0`
+- TCP `443`, remote `0.0.0.0/0`
+
+The `User Data` script installs Docker, Docker Compose, Git, curl and OpenSSL on first boot. If you skip it, `deploy.sh` installs the same tools later. The SSH user for Ubuntu images is `ubuntu`.
+
+If `inet-pub2` gives the instance a reachable public IP, you may not need a floating IP. If the IP is private or unreachable, allocate and associate one using the steps below.
+
+---
+
 ## Path A — manual VM creation, then manual deployment
 
 ### A1. Create the VM in the Nobus console
