@@ -230,7 +230,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [lastBatch, setLastBatch] = useState<string>(() => loadLS<string>(LS.lastBatch, ''));
   const [liveIssuerPub, setLiveIssuerPub] = useState<string>(() => loadLS<string>(LS.liveIssuerPub, ''));
   const [online, setOnline] = useState<boolean>(navigator.onLine);
-  const booted = useRef(false);
   const roleRef = useRef<Role | null>(role);
   const relayRef = useRef<((ids?: string[]) => Promise<RelayResult[]>) | null>(null);
 
@@ -314,8 +313,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   // Boot: detect Core, then bind both edge identities so the customer's demo invoice
   // always references the merchant id the merchant will actually use.
   useEffect(() => {
-    if (booted.current) return;
-    booted.current = true;
+    // StrictMode remounts once in development; the cleanup flag below lets the
+    // second mount complete the boot instead of being blocked by a "once" guard.
     let cancelled = false;
 
     (async () => {
