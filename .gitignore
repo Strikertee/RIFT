@@ -1,0 +1,17 @@
+competition-rebuild-kit/
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.db
+*.sqlite
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.pytest_cache/
+*.tsbuildinfo
+npm-debug.log*
