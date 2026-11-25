@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
+
+
+def utcnow_aware() -> datetime:
+    return datetime.now(timezone.utc).replace(microsecond=0)
 
 from sqlalchemy import (
     JSON,
@@ -30,9 +34,9 @@ class User(Base):
     display_name: Mapped[str] = mapped_column(String(100), nullable=False)
     public_key_hex: Mapped[str] = mapped_column(String(64), nullable=False, unique=True)
     role: Mapped[str] = mapped_column(String(20), nullable=False, default="CUSTOMER")
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow_aware)
     updated_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow
+        DateTime(timezone=True), nullable=False, default=utcnow_aware, onupdate=utcnow_aware
     )
 
     bank_account: Mapped[MockBankAccount | None] = relationship(back_populates="user", uselist=False)
@@ -58,7 +62,7 @@ class Merchant(Base):
     max_cumulative_offline_kobo: Mapped[int] = mapped_column(
         BigInteger, nullable=False, default=5_000_000
     )
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow_aware)
 
 
 class MockBankAccount(Base):
@@ -73,9 +77,9 @@ class MockBankAccount(Base):
         BigInteger, nullable=False, default=5_000_000
     )
     reserved_balance_kobo: Mapped[int] = mapped_column(BigInteger, nullable=False, default=0)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow_aware)
     updated_at: Mapped[datetime] = mapped_column(
-        DateTime(timezone=True), nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow
+        DateTime(timezone=True), nullable=False, default=utcnow_aware, onupdate=utcnow_aware
     )
 
     user: Mapped[User] = relationship(back_populates="bank_account")
@@ -102,7 +106,7 @@ class Allocation(Base):
     issuer_signature_hex: Mapped[str] = mapped_column(String(128), nullable=False)
     issued_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow_aware)
 
     user: Mapped[User] = relationship(back_populates="allocations")
 
@@ -136,7 +140,7 @@ class Transaction(Base):
     simulated_clearing_ref: Mapped[str | None] = mapped_column(String(64), nullable=True)
     rejection_reason: Mapped[str | None] = mapped_column(String(255), nullable=True)
     created_offline_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
-    ingested_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=datetime.utcnow)
+    ingested_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow_aware)
     settled_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
     __table_args__ = (
@@ -158,7 +162,7 @@ class AuditLog(Base):
     entity_id: Mapped[str] = mapped_column(String(64), nullable=False)
     actor: Mapped[str] = mapped_column(String(50), nullable=False)
     payload: Mapped[dict[str, object]] = mapped_column(JSON, nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=datetime.utcnow)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow_aware)
 
     __table_args__ = (
         Index("idx_audit_event", "event_type"),

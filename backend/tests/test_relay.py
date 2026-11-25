@@ -3,11 +3,13 @@ from __future__ import annotations
 from datetime import timedelta
 
 from httpx import AsyncClient
+from nacl.signing import SigningKey
 from sqlalchemy import delete, update
 
 from app.config import get_settings
+from app.crypto import oac_payload_from_mapping, sign_payload
 from app.models import Allocation
-from app.timeutil import utc_now
+from app.timeutil import format_timestamp, utc_now
 from tests.helpers import (
     CUSTOMER_SEED_HEX,
     MERCHANT_SEED_HEX,
@@ -140,8 +142,17 @@ async def test_unknown_oac_is_rejected(client: AsyncClient, db_session) -> None:
 
 async def test_expired_oac_is_rejected(client: AsyncClient, db_session) -> None:
     _, merchant, allocation = await setup_participants(client)
+    past = utc_now() - timedelta(seconds=1)
+    expired_oac = dict(allocation)
+    expired_oac["expires_at"] = format_timestamp(past)
+    issuer_key = SigningKey(
+        bytes.fromhex("1111111111111111111111111111111111111111111111111111111111111111")
+    )
+    expired_oac["issuer_signature_hex"] = sign_payload(
+        issuer_key, oac_payload_from_mapping(expired_oac)
+    )
     transaction = make_transaction(
-        oac=allocation,
+        oac=expired_oac,
         merchant_id=str(merchant["user_id"]),
         amount_kobo=200_000,
         seq_no=1,
@@ -150,7 +161,7 @@ async def test_expired_oac_is_rejected(client: AsyncClient, db_session) -> None:
         await db_session.execute(
             update(Allocation)
             .where(Allocation.oac_id == allocation["oac_id"])
-            .values(expires_at=utc_now() - timedelta(seconds=1))
+            .values(expires_at=past)
         )
     result = (await relay(client, relay_body(transaction))).json()["results"][0]
     assert result["validation_result"] == "OAC_EXPIRED"

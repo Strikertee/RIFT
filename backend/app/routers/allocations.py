@@ -52,37 +52,37 @@ async def issue_allocation(
     except CryptoConfigurationError as exc:
         raise ApiError(500, "ISSUER_KEY_UNAVAILABLE", "Issuer key is not available.") from exc
 
-    async with db.begin():
-        account = await db.scalar(
-            select(MockBankAccount)
-            .where(MockBankAccount.user_id == current_user.id)
-            .with_for_update()
-        )
-        if account is None:
-            raise ApiError(409, "MOCK_ACCOUNT_MISSING", "Mock bank account is missing.")
-        if account.available_balance_kobo < payload.amount_kobo:
-            raise ApiError(400, "INSUFFICIENT_FUNDS", "Available balance is insufficient.")
+    account = await db.scalar(
+        select(MockBankAccount)
+        .where(MockBankAccount.user_id == current_user.id)
+        .with_for_update()
+    )
+    if account is None:
+        raise ApiError(409, "MOCK_ACCOUNT_MISSING", "Mock bank account is missing.")
+    if account.available_balance_kobo < payload.amount_kobo:
+        raise ApiError(400, "INSUFFICIENT_FUNDS", "Available balance is insufficient.")
 
-        now = utc_now()
-        expires_at = now + timedelta(hours=payload.duration_hours)
-        oac_id = f"oac_{uuid.uuid4().hex}"
-        customer_id = format_user_id(current_user.id, current_user.role)
-        issued_at_text = format_timestamp(now)
-        expires_at_text = format_timestamp(expires_at)
+    now = utc_now()
+    expires_at = now + timedelta(hours=payload.duration_hours)
+    oac_id = f"oac_{uuid.uuid4().hex}"
+    customer_id = format_user_id(current_user.id, current_user.role)
+    issued_at_text = format_timestamp(now)
+    expires_at_text = format_timestamp(expires_at)
 
-        canonical = oac_payload(
-            oac_id=oac_id,
-            customer_id=customer_id,
-            customer_pubkey_hex=current_user.public_key_hex,
-            allocated_amount_kobo=payload.amount_kobo,
-            currency="NGN",
-            issued_at=issued_at_text,
-            expires_at=expires_at_text,
-            issuer_key_version=settings.issuer_key_version,
-        )
-        signature_hex = sign_payload(signing_key, canonical)
+    canonical = oac_payload(
+        oac_id=oac_id,
+        customer_id=customer_id,
+        customer_pubkey_hex=current_user.public_key_hex,
+        allocated_amount_kobo=payload.amount_kobo,
+        currency="NGN",
+        issued_at=issued_at_text,
+        expires_at=expires_at_text,
+        issuer_key_version=settings.issuer_key_version,
+    )
+    signature_hex = sign_payload(signing_key, canonical)
 
-        allocation = Allocation(
+    db.add(
+        Allocation(
             oac_id=oac_id,
             user_id=current_user.id,
             allocated_amount_kobo=payload.amount_kobo,
@@ -95,16 +95,17 @@ async def issue_allocation(
             expires_at=expires_at,
             created_at=now,
         )
-        db.add(allocation)
-        account.available_balance_kobo -= payload.amount_kobo
-        account.reserved_balance_kobo += payload.amount_kobo
-        await write_audit(
-            db,
-            "OAC_ISSUED",
-            oac_id,
-            customer_id,
-            {"allocated_amount_kobo": payload.amount_kobo, "duration_hours": payload.duration_hours},
-        )
+    )
+    account.available_balance_kobo -= payload.amount_kobo
+    account.reserved_balance_kobo += payload.amount_kobo
+    await write_audit(
+        db,
+        "OAC_ISSUED",
+        oac_id,
+        customer_id,
+        {"allocated_amount_kobo": payload.amount_kobo, "duration_hours": payload.duration_hours},
+    )
+    await db.commit()
 
     return AllocationIssueResponse(
         oac_id=oac_id,
@@ -135,19 +136,19 @@ async def _allocation_status_impl(
     current_user: User,
     db: AsyncSession,
 ) -> AllocationStatusResponse:
-    async with db.begin():
-        allocation = await db.scalar(select(Allocation).where(Allocation.oac_id == oac_id))
-        if allocation is None:
-            raise ApiError(404, "OAC_NOT_FOUND", "Allocation was not found.")
-        if allocation.user_id != current_user.id:
-            raise ApiError(403, "FORBIDDEN", "Allocation belongs to another customer.")
-        if allocation.status == "ACTIVE" and as_utc(allocation.expires_at) <= utc_now():
-            allocation.status = "EXPIRED"
-        account = await db.scalar(
-            select(MockBankAccount).where(MockBankAccount.user_id == current_user.id)
-        )
-        if account is None:
-            raise ApiError(409, "MOCK_ACCOUNT_MISSING", "Mock bank account is missing.")
+    allocation = await db.scalar(select(Allocation).where(Allocation.oac_id == oac_id))
+    if allocation is None:
+        raise ApiError(404, "OAC_NOT_FOUND", "Allocation was not found.")
+    if allocation.user_id != current_user.id:
+        raise ApiError(403, "FORBIDDEN", "Allocation belongs to another customer.")
+    if allocation.status == "ACTIVE" and as_utc(allocation.expires_at) <= utc_now():
+        allocation.status = "EXPIRED"
+    account = await db.scalar(
+        select(MockBankAccount).where(MockBankAccount.user_id == current_user.id)
+    )
+    if account is None:
+        raise ApiError(409, "MOCK_ACCOUNT_MISSING", "Mock bank account is missing.")
+    await db.commit()
 
     return AllocationStatusResponse(
         oac_id=allocation.oac_id,

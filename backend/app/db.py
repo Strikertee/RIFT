@@ -47,7 +47,7 @@ async def close_engine() -> None:
 
 async def database_is_connected() -> bool:
     try:
-        async with get_sessionmaker() as session:
+        async with get_sessionmaker()() as session:
             await session.execute(text("SELECT 1"))
         return True
     except Exception:
@@ -55,5 +55,5 @@ async def database_is_connected() -> bool:
 
 
 async def get_db() -> AsyncIterator[AsyncSession]:
-    async with get_sessionmaker() as session:
+    async with get_sessionmaker()() as session:
         yield session

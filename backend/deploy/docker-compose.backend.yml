@@ -1,0 +1,47 @@
+services:
+  backend:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      ENVIRONMENT: production
+      APP_VERSION: ${APP_VERSION:-1.0.0}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+asyncpg://rift_user:${DB_PASSWORD}@postgres:5432/rift_db}
+      RIFT_ISSUER_PRIVATE_KEY_HEX: ${ISSUER_PRIVATE_KEY_HEX}
+      ISSUER_KEY_VERSION: v1
+      ADMIN_SECRET: ${ADMIN_SECRET}
+      RELAY_API_KEY: ${RELAY_API_KEY}
+      MOCK_STARTING_BALANCE_KOBO: "5000000"
+      CORS_ORIGINS: https://${RIFT_DOMAIN}
+      AUTO_CREATE_SCHEMA: "false"
+      RUN_MIGRATIONS: "true"
+      PORT: "8000"
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  postgres:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: rift_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: rift_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rift_user -d rift_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:

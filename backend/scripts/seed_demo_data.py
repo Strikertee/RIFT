@@ -30,7 +30,7 @@ def deterministic_values(phone_number: str) -> tuple[str, str, str]:
 async def seed(settings: Settings | None = None) -> None:
     active = settings or get_settings()
     await init_schema()
-    async with get_sessionmaker() as db:
+    async with get_sessionmaker()() as db:
         async with db.begin():
             for phone_number, display_name, role in DEMO_PARTICIPANTS:
                 public_key_hex, merchant_code, account_number = deterministic_values(phone_number)

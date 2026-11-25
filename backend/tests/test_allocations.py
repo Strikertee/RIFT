@@ -2,21 +2,21 @@ from __future__ import annotations
 
 from httpx import AsyncClient
 
-from tests.helpers import (
-    CUSTOMER_SEED_HEX,
-    MERCHANT_SEED_HEX,
-    register_body,
-)
+from tests.helpers import CUSTOMER_SEED_HEX, STRANGER_SEED_HEX, register_body
 
 
-async def register_customer(client: AsyncClient, phone: str = "+2348000000001") -> dict[str, object]:
+async def register_customer(
+    client: AsyncClient,
+    phone: str = "+2348000000001",
+    seed_hex: str = CUSTOMER_SEED_HEX,
+) -> dict[str, object]:
     response = await client.post(
         "/api/v1/auth/register",
         json=register_body(
             user_type="CUSTOMER",
             display_name="Bayo Commuter",
             phone_number=phone,
-            seed_hex=CUSTOMER_SEED_HEX,
+            seed_hex=seed_hex,
         ),
     )
     assert response.status_code == 201
@@ -113,7 +113,7 @@ async def test_allocation_status_returns_owner_view(client: AsyncClient) -> None
 async def test_allocation_status_forbids_other_customer(client: AsyncClient) -> None:
     owner = await register_customer(client)
     allocation = await issue(client, str(owner["user_id"]), 1_000_000)
-    stranger = await register_customer(client, "+2348000000002")
+    stranger = await register_customer(client, "+2348000000002", STRANGER_SEED_HEX)
     response = await client.get(
         f"/api/v1/allocations/{allocation['oac_id']}",
         headers={"Authorization": f"Bearer {stranger['user_id']}"},

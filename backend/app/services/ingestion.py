@@ -12,6 +12,7 @@ from app.config import Settings, get_settings
 from app.crypto import (
     CryptoConfigurationError,
     derive_transaction_id,
+    format_user_id,
     load_issuer_verifying_key,
     oac_payload_from_mapping,
     parse_identifier_uuid,
@@ -65,7 +66,7 @@ def _invalid_signature(transaction_id: str, reason: str) -> RelayResult:
 
 
 async def _existing_result(transaction_id: str) -> RelayResult | None:
-    async with get_sessionmaker() as db:
+    async with get_sessionmaker()() as db:
         existing = await db.scalar(
             select(Transaction).where(Transaction.transaction_id == transaction_id)
         )
@@ -143,7 +144,7 @@ async def _audit_collision(
     actor: str,
     reason: str,
 ) -> None:
-    async with get_sessionmaker() as db:
+    async with get_sessionmaker()() as db:
         async with db.begin():
             await write_audit(
                 db,
@@ -162,7 +163,7 @@ async def _audit_collision(
 async def _collision_after_integrity_error(
     transaction: TransactionIn,
 ) -> RelayResult:
-    async with get_sessionmaker() as db:
+    async with get_sessionmaker()() as db:
         sequence_duplicate = await db.scalar(
             select(Transaction.id).where(
                 Transaction.oac_id == transaction.oac_id,
@@ -195,7 +196,7 @@ async def _commit_or_reject(
 ) -> RelayResult:
     token = transaction.oac_token
     try:
-        async with get_sessionmaker() as db:
+        async with get_sessionmaker()() as db:
             async with db.begin():
                 allocation = await db.scalar(
                     select(Allocation)

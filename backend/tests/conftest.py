@@ -32,7 +32,7 @@ _MUTABLE_FIELDS = (
 
 
 async def _override_get_db() -> AsyncIterator[AsyncSession]:
-    async with get_sessionmaker() as session:
+    async with get_sessionmaker()() as session:
         yield session
 
 
@@ -70,5 +70,5 @@ async def client(tmp_path: object) -> AsyncIterator[AsyncClient]:
 
 @pytest.fixture
 async def db_session() -> AsyncIterator[AsyncSession]:
-    async with get_sessionmaker() as session:
+    async with get_sessionmaker()() as session:
         yield session

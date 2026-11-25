@@ -1,0 +1,85 @@
+heat_template_version: 2018-08-31
+
+description: >
+  Optional semi-automated RIFT demo VM. Launch from Nobus dashboard:
+  Orchestration > Stacks > Launch Stack > Template Source: File.
+  Verify resource property names against the Nobus console before use.
+
+parameters:
+  server_name:
+    type: string
+    default: rift-core-demo
+  image:
+    type: string
+    description: Exact Ubuntu image name shown in your Nobus project.
+    default: Ubuntu-22.04-64bit
+  flavor:
+    type: string
+    description: Exact spec/flavor shown in your Nobus project.
+    default: si.2.4.30l
+  key_name:
+    type: string
+    description: Existing Nobus keypair name for SSH access.
+  network:
+    type: string
+    description: Network or network ID selected in the launch form.
+  ssh_cidr:
+    type: string
+    description: Restrict SSH to your IP, e.g. 203.0.113.5/32.
+    default: 0.0.0.0/0
+  admin_email:
+    type: string
+    default: admin@example.test
+
+resources:
+  rift_security_group:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      name: rift-demo-sg
+      description: SSH for admin, HTTP and HTTPS for Caddy.
+      rules:
+        - remote_ip_prefix: {get_param: ssh_cidr}
+          protocol: tcp
+          port_range_min: 22
+          port_range_max: 22
+        - remote_ip_prefix: 0.0.0.0/0
+          protocol: tcp
+          port_range_min: 80
+          port_range_max: 80
+        - remote_ip_prefix: 0.0.0.0/0
+          protocol: tcp
+          port_range_min: 443
+          port_range_max: 443
+
+  rift_server:
+    type: OS::Nova::Server
+    properties:
+      name: {get_param: server_name}
+      image: {get_param: image}
+      flavor: {get_param: flavor}
+      key_name: {get_param: key_name}
+      networks:
+        - network: {get_param: network}
+      security_groups:
+        - {get_resource: rift_security_group}
+      user_data_format: RAW
+      user_data: |
+        #cloud-config
+        package_update: true
+        packages:
+          - ca-certificates
+          - curl
+          - git
+          - openssl
+          - docker.io
+          - docker-compose-plugin
+        runcmd:
+          - usermod -aG docker ubuntu || true
+
+outputs:
+  server_id:
+    description: Nova server ID.
+    value: {get_attr: [rift_server, id]}
+  server_ip:
+    description: First assigned address. Attach a floating IP in the console if needed.
+    value: {get_attr: [rift_server, first_address]}

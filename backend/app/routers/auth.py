@@ -47,74 +47,70 @@ async def register(
     db: AsyncSession = Depends(get_db),
     settings: Settings = Depends(get_settings),
 ) -> RegisterResponse:
-    async with db.begin():
-        public_key_match = await db.scalar(
-            select(User.id).where(User.public_key_hex == payload.public_key_hex)
-        )
-        if public_key_match is not None:
-            raise ApiError(409, "PUBLIC_KEY_ALREADY_REGISTERED", "Public key is already registered.")
+    public_key_match = await db.scalar(
+        select(User.id).where(User.public_key_hex == payload.public_key_hex)
+    )
+    if public_key_match is not None:
+        raise ApiError(409, "PUBLIC_KEY_ALREADY_REGISTERED", "Public key is already registered.")
 
-        phone_match = await db.scalar(
-            select(User.id).where(User.phone_number == payload.phone_number)
-        )
-        if phone_match is not None:
-            raise ApiError(409, "PHONE_ALREADY_REGISTERED", "Phone number is already registered.")
+    phone_match = await db.scalar(select(User.id).where(User.phone_number == payload.phone_number))
+    if phone_match is not None:
+        raise ApiError(409, "PHONE_ALREADY_REGISTERED", "Phone number is already registered.")
 
-        merchant_code: str | None = None
-        if payload.user_type == "MERCHANT":
-            merchant_code = payload.merchant_code or await _unused_merchant_code(db)
-            code_match = await db.scalar(
-                select(Merchant.id).where(Merchant.merchant_code == merchant_code)
-            )
-            if code_match is not None:
-                raise ApiError(
-                    409,
-                    "MERCHANT_CODE_ALREADY_REGISTERED",
-                    "Merchant code is already registered.",
-                )
-
-        now = utc_now()
-        user = User(
-            phone_number=payload.phone_number,
-            display_name=payload.display_name,
-            public_key_hex=payload.public_key_hex,
-            role=payload.user_type,
-            created_at=now,
-            updated_at=now,
-        )
-        db.add(user)
-        await db.flush()
-
-        account = MockBankAccount(
-            user_id=user.id,
-            account_number=await _unused_account_number(db),
-            available_balance_kobo=settings.mock_starting_balance_kobo,
-            reserved_balance_kobo=0,
-            created_at=now,
-            updated_at=now,
-        )
-        db.add(account)
-
-        if payload.user_type == "MERCHANT":
-            db.add(
-                Merchant(
-                    id=user.id,
-                    merchant_code=merchant_code or await _unused_merchant_code(db),
-                    business_name=payload.business_name or payload.display_name,
-                    terminal_pubkey_hex=payload.public_key_hex,
-                    settlement_account_num=account.account_number,
-                    risk_tier="STANDARD",
-                    created_at=now,
-                )
+    merchant_code: str | None = None
+    if payload.user_type == "MERCHANT":
+        merchant_code = payload.merchant_code or await _unused_merchant_code(db)
+        code_match = await db.scalar(select(Merchant.id).where(Merchant.merchant_code == merchant_code))
+        if code_match is not None:
+            raise ApiError(
+                409,
+                "MERCHANT_CODE_ALREADY_REGISTERED",
+                "Merchant code is already registered.",
             )
 
-        await write_audit(
-            db,
-            "USER_REGISTERED",
-            format_user_id(user.id, user.role),
-            "core",
-            {"user_type": user.role, "phone_number": user.phone_number},
+    now = utc_now()
+    user = User(
+        phone_number=payload.phone_number,
+        display_name=payload.display_name,
+        public_key_hex=payload.public_key_hex,
+        role=payload.user_type,
+        created_at=now,
+        updated_at=now,
+    )
+    db.add(user)
+    await db.flush()
+
+    account = MockBankAccount(
+        user_id=user.id,
+        account_number=await _unused_account_number(db),
+        available_balance_kobo=settings.mock_starting_balance_kobo,
+        reserved_balance_kobo=0,
+        created_at=now,
+        updated_at=now,
+    )
+    db.add(account)
+
+    if payload.user_type == "MERCHANT":
+        db.add(
+            Merchant(
+                id=user.id,
+                merchant_code=merchant_code or await _unused_merchant_code(db),
+                business_name=payload.business_name or payload.display_name,
+                terminal_pubkey_hex=payload.public_key_hex,
+                settlement_account_num=account.account_number,
+                risk_tier="STANDARD",
+                created_at=now,
+            )
         )
+
+    await write_audit(
+        db,
+        "USER_REGISTERED",
+        format_user_id(user.id, user.role),
+        "core",
+        {"user_type": user.role, "phone_number": user.phone_number},
+    )
+    await db.commit()
 
     response.status_code = status.HTTP_201_CREATED
     return RegisterResponse(
@@ -127,4 +123,3 @@ async def register(
         mock_balance_kobo=account.available_balance_kobo,
         created_at=format_timestamp(as_utc(user.created_at)),
     )
-

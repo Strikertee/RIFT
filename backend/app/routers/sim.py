@@ -21,31 +21,31 @@ async def sim_reset(
     db: AsyncSession = Depends(get_db),
     settings: Settings = Depends(get_settings),
 ) -> SimResetResponse:
-    async with db.begin():
-        account_count = int(await db.scalar(select(func.count(MockBankAccount.id))) or 0)
-        transaction_count = int(await db.scalar(select(func.count(Transaction.id))) or 0)
-        allocation_count = int(await db.scalar(select(func.count(Allocation.id))) or 0)
+    account_count = int(await db.scalar(select(func.count(MockBankAccount.id))) or 0)
+    transaction_count = int(await db.scalar(select(func.count(Transaction.id))) or 0)
+    allocation_count = int(await db.scalar(select(func.count(Allocation.id))) or 0)
 
-        await db.execute(delete(AuditLog))
-        await db.execute(delete(Transaction))
-        await db.execute(delete(Allocation))
-        await db.execute(
-            update(MockBankAccount).values(
-                available_balance_kobo=settings.mock_starting_balance_kobo,
-                reserved_balance_kobo=0,
-            )
+    await db.execute(delete(AuditLog))
+    await db.execute(delete(Transaction))
+    await db.execute(delete(Allocation))
+    await db.execute(
+        update(MockBankAccount).values(
+            available_balance_kobo=settings.mock_starting_balance_kobo,
+            reserved_balance_kobo=0,
         )
-        await write_audit(
-            db,
-            "SIM_RESET",
-            "core",
-            "admin",
-            {
-                "transactions_purged": transaction_count,
-                "allocations_reset": allocation_count,
-                "mock_users_reset": account_count,
-            },
-        )
+    )
+    await write_audit(
+        db,
+        "SIM_RESET",
+        "core",
+        "admin",
+        {
+            "transactions_purged": transaction_count,
+            "allocations_reset": allocation_count,
+            "mock_users_reset": account_count,
+        },
+    )
+    await db.commit()
 
     return SimResetResponse(
         status="ledger_reseeded",
