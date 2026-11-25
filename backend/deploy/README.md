@@ -113,7 +113,7 @@ Run these on the VM after SSH:
 
 ```bash
 bash /tmp/rift-bootstrap-vm.sh   # or run the commands in bootstrap-vm.sh
-sudo git clone -b buildday/backend <REPO_URL> /opt/rift
+sudo git clone -b master <REPO_URL> /opt/rift
 sudo chown -R ubuntu:ubuntu /opt/rift
 cd /opt/rift
 cp backend/deploy/.env.example .env
@@ -150,7 +150,7 @@ ssh -i rift-nobus-key.pem -L 8000:127.0.0.1:8000 ubuntu@<FLOATING_IP>
 
 ### B1. Launch the stack
 
-1. Push the `buildday/backend` branch to your Git remote first.
+1. Confirm the final integrated build is pushed to the remote `master` branch.
 2. Log in to `https://dashboard.nobus.io/`.
 3. Go to **Orchestration** → **Stacks**.
 4. Click **Launch Stack**.
@@ -169,13 +169,13 @@ ssh -i rift-nobus-key.pem -L 8000:127.0.0.1:8000 ubuntu@<FLOATING_IP>
 ### B2. Deploy the app from your laptop
 
 ```bash
-export RIFT_REPO_URL="https://github.com/<owner>/<repo>.git"
+export RIFT_REPO_URL="https://github.com/Strikertee/RIFT.git"
 export RIFT_VM_HOST="ubuntu@<FLOATING_IP>"
 export RIFT_SSH_KEY="C:/path/to/rift-nobus-key.pem"
 export RIFT_DOMAIN="portal.example.test"
 export RIFT_ADMIN_EMAIL="you@example.com"
-export RIFT_BRANCH="buildday/backend"
-export RIFT_DEPLOY_MODE="backend"     # change to full after Builder B's frontend is merged
+export RIFT_BRANCH="master"
+export RIFT_DEPLOY_MODE="full"
 
 bash backend/deploy/deploy.sh
 bash backend/deploy/verify.sh
@@ -183,15 +183,14 @@ bash backend/deploy/verify.sh
 
 `deploy.sh` is idempotent: it installs Docker tools, clones or updates the repo, creates `.env` once with fresh secrets, builds the images, runs migrations and seed, and records the last green commit on the VM.
 
-After the frontend branch is merged into `main`:
+The integrated build already contains the frontend, `frontend/Dockerfile`, and the root compose stack. Use `full` mode for the real deployment. If you only want to test the API without the frontend/TLS stack, set:
 
 ```bash
-export RIFT_BRANCH="main"
-export RIFT_DEPLOY_MODE="full"
+export RIFT_DEPLOY_MODE="backend"
 bash backend/deploy/deploy.sh
 ```
 
-Full mode requires `frontend/Dockerfile` from Builder B and a domain with DNS already pointing at the VM. Caddy terminates TLS and routes `/api/*` to the backend.
+Full mode requires DNS already pointing at the VM. Caddy terminates TLS and routes `/api/*` to the backend.
 
 ---
 

@@ -9,7 +9,7 @@ set -euo pipefail
 : "${RIFT_REPO_URL:?Set RIFT_REPO_URL to the Git URL the VM can clone.}"
 : "${RIFT_VM_HOST:?Set RIFT_VM_HOST, e.g. ubuntu@192.0.2.10.}"
 
-RIFT_BRANCH="${RIFT_BRANCH:-buildday/backend}"
+RIFT_BRANCH="${RIFT_BRANCH:-master}"
 RIFT_REMOTE_DIR="${RIFT_REMOTE_DIR:-/opt/rift}"
 RIFT_DOMAIN="${RIFT_DOMAIN:-portal.example.test}"
 RIFT_ADMIN_EMAIL="${RIFT_ADMIN_EMAIL:-admin@example.test}"
