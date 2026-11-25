@@ -1,0 +1,4 @@
+No console errors captured.
+Recapture notes:
+mobile-390x844: recaptured merchant/gateway states
+desktop-1440x900: recaptured merchant/gateway states

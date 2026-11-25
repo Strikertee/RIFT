@@ -1,0 +1,125 @@
+- complementary:
+  - text: Devions Bank
+  - navigation "Primary":
+    - button "Overview Balance & activity":
+      - img
+      - text: Overview Balance & activity
+    - button "RIFT Offline Spend without network":
+      - img
+      - text: RIFT Offline Spend without network
+    - button "Loans Offers & calculator":
+      - img
+      - text: Loans Offers & calculator
+    - button "Profile Settings & security":
+      - img
+      - text: Profile Settings & security
+  - paragraph: RIFT allocation
+  - text: 16%
+  - paragraph: ₦8,000 / ₦50,000
+  - paragraph: Locked for offline spending. Settles on reconnect.
+  - text: TB
+  - paragraph: Treasure B. Okafor
+  - paragraph: Tier 2 · BVN linked
+- banner:
+  - paragraph: Customer wallet
+  - text: Customer wallet
+  - status: Online
+  - button "Mute sounds" [pressed]:
+    - img
+  - button "Switch to light mode":
+    - img
+  - button "Switch terminal role":
+    - img
+  - button "Open profile": TB
+- main:
+  - heading "RIFT Offline" [level=1]
+  - paragraph: Lock funds now. Spend with zero network.
+  - img
+  - paragraph: Available offline
+  - text: READY ₦8,000.00
+  - paragraph: ₦8,000 / ₦50,000 limit
+  - img
+  - paragraph: 16%
+  - paragraph: allocated
+  - button "Spend offline via QR":
+    - img
+    - text: Spend offline via QR
+  - img
+  - heading "Lock for offline" [level=2]
+  - paragraph: Issues a signed Offline Allocation Certificate.
+  - text: Amount to lock ₦
+  - textbox "Amount to lock ₦ Maximum ₦50,000 total · ₦42,000 of your limit remaining · Available ₦40,000":
+    - /placeholder: "0.00"
+  - text: Maximum ₦50,000 total · ₦42,000 of your limit remaining · Available ₦40,000
+  - button "₦5,000"
+  - button "₦10,000"
+  - button "₦20,000"
+  - button "Max"
+  - button "Lock funds":
+    - text: Lock funds
+    - img
+  - button "Return":
+    - img
+    - text: Return
+  - img
+  - heading "Allocation certificate" [level=2]
+  - paragraph: Ed25519 issuer-signed OAC
+  - button "Reconcile":
+    - img
+    - text: Reconcile
+  - text: OAC oac_c3146117-0358-... Remaining / allocated ₦8,000 / ₦10,000 Sequence counter 1 Expires 27 Nov, 19:01
+  - heading "How RIFT works" [level=2]
+  - list:
+    - listitem:
+      - text: "1"
+      - paragraph:
+        - img
+        - text: Lock an allocation
+      - paragraph: RIFT Core (or the simulated issuer) signs an Offline Allocation Certificate for up to ₦50,000.
+    - listitem:
+      - text: "2"
+      - paragraph:
+        - img
+        - text: Pay over QR
+      - paragraph: Your device signs an Ed25519 authorisation bound to the merchant invoice. No data, no Wi-Fi, no problem.
+    - listitem:
+      - text: "3"
+      - paragraph:
+        - img
+        - text: Auto-reconcile
+      - paragraph: Merchant or gateway relays the receipt; Core verifies, anti-replays and settles on reconnect.
+  - heading "RIFT activity" [level=2]
+  - img
+  - paragraph: Offline payment — Mama Nkechi Foods
+  - paragraph: Just now
+  - paragraph: ₦2,000
+  - img
+  - paragraph: Locked for offline spending
+  - paragraph: Just now
+  - paragraph: ₦10,000
+  - img
+  - paragraph: Offline payment — Mama Nkechi Foods
+  - paragraph: 17 Nov, 13:02
+  - paragraph: ₦1,800
+  - img
+  - paragraph: Returned to online balance
+  - paragraph: 17 Nov, 18:40
+  - paragraph: ₦8,200
+- dialog "Authorisation token":
+  - button "Close dialog"
+  - heading "Authorisation token" [level=2]
+  - button "Close":
+    - img
+  - img
+  - paragraph: R2.ArdJpydR54Dsc7BLv8MpfmHDFGEXA1iR_79YHX7tlDJplOAiHJJKv7C_EtybnNSkCsAFa0YLZZ_wsZ1rJFYQ85cAAAABAAAAAw1AH17XruUUsktrBdELAAAAD0JAawXRBWsJxYUBT3uSH1cfQc7U0Lkbj9gqCjWeLcoEiK_vBoQeWlrZ0PIbuIIvGJhtCTKZyuvabgzyL804em9JhU4rSHqENjuRkz9xrVeS41HHqq4dnGmesfr5CMgAURmnrdeIUCHUjpsJGoK86Bp7cDbBLzJLvVp5VNX1VkV9-veLD3srGX6guKssfPhtuxrukVbCtfkN8HRYiOFX-fszHfRi9yMZODr9Dw
+  - paragraph: Mama Nkechi Foods
+  - text: ₦2,000
+  - paragraph: tx_b749a727-51e7-80ec-...
+  - paragraph:
+    - img
+    - img
+    - text: Ed25519-signed · waiting for merchant scan…
+  - button "Copy token":
+    - img
+    - text: Copy token
+  - button "Done for now"

@@ -1,0 +1,696 @@
+{
+  "generatedAt": "2026-11-24T18:04:01.328Z",
+  "index": [
+    {
+      "file": "screenshots/other-pages/rolegate-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-mobile-360x800-360x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "360x800",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/other-pages/rolegate-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-mobile-375x812-375x812.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "375x812",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/other-pages/rolegate-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/interaction-states/spend-modal-form-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "spend-modal-form",
+      "detail": "Demo invoice form with amount chips"
+    },
+    {
+      "file": "screenshots/interaction-states/auth-qr-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "authorisation-qr",
+      "detail": "Signed authorisation QR with raw token"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/interaction-states/gateway-light-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "390x844",
+      "state": "light-theme",
+      "detail": "Light theme variant"
+    },
+    {
+      "file": "screenshots/other-pages/rolegate-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-mobile-412x915-412x915.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "412x915",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/other-pages/rolegate-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-tablet-768x1024-768x1024.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "768x1024",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/other-pages/rolegate-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-tablet-landscape-1024x768-1024x768.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1024x768",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/other-pages/rolegate-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-laptop-1280x800-1280x800.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1280x800",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/other-pages/rolegate-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/interaction-states/spend-modal-form-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "spend-modal-form",
+      "detail": "Demo invoice form with amount chips"
+    },
+    {
+      "file": "screenshots/interaction-states/auth-qr-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "authorisation-qr",
+      "detail": "Signed authorisation QR with raw token"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/interaction-states/gateway-light-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1440x900",
+      "state": "light-theme",
+      "detail": "Light theme variant"
+    },
+    {
+      "file": "screenshots/other-pages/rolegate-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "role-gate",
+      "detail": "Three role cards and simulated-core badge"
+    },
+    {
+      "file": "screenshots/dashboard/customer-overview-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "customer-home",
+      "detail": "Overview with balances, quick services, analytics and recent activity"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-empty-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "customer-rift-empty",
+      "detail": "RIFT lock form before allocation"
+    },
+    {
+      "file": "screenshots/dashboard/customer-rift-locked-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "customer-rift-locked",
+      "detail": "Allocation certificate with OAC and remaining balance"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-till-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "merchant-till",
+      "detail": "Merchant keypad and empty receipt outbox"
+    },
+    {
+      "file": "screenshots/interaction-states/merchant-invoice-qr-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "invoice-qr",
+      "detail": "Invoice QR, raw token and paste/camera intake"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-receipts-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "merchant-receipts",
+      "detail": "Receipt outbox filtered view"
+    },
+    {
+      "file": "screenshots/other-pages/merchant-sync-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "merchant-sync-relay",
+      "detail": "Batch export and relay controls"
+    },
+    {
+      "file": "screenshots/other-pages/gateway-desktop-1920x1080-1920x1080.png",
+      "url": "http://127.0.0.1:5174/",
+      "viewport": "1920x1080",
+      "state": "gateway-queue",
+      "detail": "Gateway stats, ingest card, relay queue and settlement ledger"
+    },
+    {
+      "file": "screenshots/authentication/client-onboarding-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5173/",
+      "viewport": "390x844",
+      "state": "client-onboarding",
+      "detail": "Role selection and onboarding form; API-not-configured notice may be visible"
+    },
+    {
+      "file": "screenshots/authentication/client-set-pin-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5173/",
+      "viewport": "390x844",
+      "state": "client-set-pin",
+      "detail": "One-time PIN setup after seeded registered identity"
+    },
+    {
+      "file": "screenshots/authentication/client-login-mobile-390x844-390x844.png",
+      "url": "http://127.0.0.1:5173/",
+      "viewport": "390x844",
+      "state": "client-login",
+      "detail": "Device-local PIN login screen with masked phone and role"
+    },
+    {
+      "file": "screenshots/authentication/client-onboarding-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5173/",
+      "viewport": "1440x900",
+      "state": "client-onboarding",
+      "detail": "Role selection and onboarding form; API-not-configured notice may be visible"
+    },
+    {
+      "file": "screenshots/authentication/client-set-pin-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5173/",
+      "viewport": "1440x900",
+      "state": "client-set-pin",
+      "detail": "One-time PIN setup after seeded registered identity"
+    },
+    {
+      "file": "screenshots/authentication/client-login-desktop-1440x900-1440x900.png",
+      "url": "http://127.0.0.1:5173/",
+      "viewport": "1440x900",
+      "state": "client-login",
+      "detail": "Device-local PIN login screen with masked phone and role"
+    }
+  ],
+  "consoleErrors": [],
+  "notes": [
+    "Capturing bank mobile-360x800",
+    "Capturing bank mobile-375x812",
+    "Capturing bank mobile-390x844",
+    "Click failed (close-spend-dialog): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Close dialog' }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <path fill=\"#000000\" shape-rendering=\"crispEdges\" d=\"M0 0h7v1H0zM8 0h4v1H8zM14 0h2v1H14zM18 0h1v1H18zM20 0h3v1H20zM24 0h1v1H24zM26 0h2v1H26zM30 0h1v1H30zM32 0h2v1H32zM35 0h2v1H35zM38 0h1v1H38zM41 0h5v1H41zM48 0h1v1H48zM50 0h3v1H50zM55 0h1v1H55zM58,0 h7v1H58zM0 1h1v1H0zM6 1h1v1H6zM8 1h2v1H8zM11 1h2v1H11zM17 1h1v1H17zM20 1h1v1H20zM23 1h1v1H23zM26 1h1v1H26zM28 1h2v1H28zM31 1h3v1H31zM35 1h3v1H35zM43 1h1v1H43zM47 1h1v1H47zM50 1h3v1H50zM56 1h1v1H56zM58 1h1v1H58zM64,1 h1v1H64zM0 2h1v1H0zM2 2h3v1H2zM6 2h1v1…></path> from <div class=\"relative flex max-h-[90vh] w-full flex-col overflow-hidden rounded-t-4xl border border-line bg-surface shadow-dock sm:rounded-4xl sm:max-w-md animate-[sheet-up_0.32s_cubic-bezier(0.22,1,0.36,1)_both]\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <path fill=\"#000000\" shape-rendering=\"crispEdges\" d=\"M0 0h7v1H0zM8 0h4v1H8zM14 0h2v1H14zM18 0h1v1H18zM20 0h3v1H20zM24 0h1v1H24zM26 0h2v1H26zM30 0h1v1H30zM32 0h2v1H32zM35 0h2v1H35zM38 0h1v1H38zM41 0h5v1H41zM48 0h1v1H48zM50 0h3v1H50zM55 0h1v1H55zM58,0 h7v1H58zM0 1h1v1H0zM6 1h1v1H6zM8 1h2v1H8zM11 1h2v1H11zM17 1h1v1H17zM20 1h1v1H20zM23 1h1v1H23zM26 1h1v1H26zM28 1h2v1H28zM31 1h3v1H31zM35 1h3v1H35zM43 1h1v1H43zM47 1h1v1H47zM50 1h3v1H50zM56 1h1v1H56zM58 1h1v1H58zM64,1 h1v1H64zM0 2h1v1H0zM2 2h3v1H2zM6 2h1v1…></path> from <div class=\"relative flex max-h-[90vh] w-full flex-col overflow-hidden rounded-t-4xl border border-line bg-surface shadow-dock sm:rounded-4xl sm:max-w-md animate-[sheet-up_0.32s_cubic-bezier(0.22,1,0.36,1)_both]\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <path fill=\"#000000\" shape-rendering=\"crispEdges\" d=\"M0 0h7v1H0zM8 0h4v1H8zM14 0h2v1H14zM18 0h1v1H18zM20 0h3v1H20zM24 0h1v1H24zM26 0h2v1H26zM30 0h1v1H30zM32 0h2v1H32zM35 0h2v1H35zM38 0h1v1H38zM41 0h5v1H41zM48 0h1v1H48zM50 0h3v1H50zM55 0h1v1H55zM58,0 h7v1H58zM0 1h1v1H0zM6 1h1v1H6zM8 1h2v1H8zM11 1h2v1H11zM17 1h1v1H17zM20 1h1v1H20zM23 1h1v1H23zM26 1h1v1H26zM28 1h2v1H28zM31 1h3v1H31zM35 1h3v1H35zM43 1h1v1H43zM47 1h1v1H47zM50 1h3v1H50zM56 1h1v1H56zM58 1h1v1H58zM64,1 h1v1H64zM0 2h1v1H0zM2 2h3v1H2zM6 2h1v1…></path> from <div class=\"relative flex max-h-[90vh] w-full flex-col overflow-hidden rounded-t-4xl border border-line bg-surface shadow-dock sm:rounded-4xl sm:max-w-md animate-[sheet-up_0.32s_cubic-bezier(0.22,1,0.36,1)_both]\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+    "Click failed (switch-role): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Switch terminal role' }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" title=\"Switch terminal role\" aria-label=\"Switch terminal role\" class=\"press grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line bg-raised text-muted transition-colors hover:border-line-strong hover:text-ink \">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+    "Click failed (role:merchant): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Merchant Raise invoices/i }).first()\u001b[22m\n",
+    "Click failed (digit-2): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '2', exact: true }).first()\u001b[22m\n",
+    "Click failed (digit-0): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '0', exact: true }).first()\u001b[22m\n",
+    "Click failed (digit-0): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '0', exact: true }).first()\u001b[22m\n",
+    "Click failed (digit-0): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '0', exact: true }).first()\u001b[22m\n",
+    "Click failed (create-invoice): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Create invoice QR' }).first()\u001b[22m\n",
+    "Click failed (merchant-receipts): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Receipts', exact: true }).first()\u001b[22m\n",
+    "Click failed (merchant-sync): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Sync & relay', exact: true }).first()\u001b[22m\n",
+    "Click failed (switch-role): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Switch terminal role' }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" title=\"Switch terminal role\" aria-label=\"Switch terminal role\" class=\"press grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line bg-raised text-muted transition-colors hover:border-line-strong hover:text-ink \">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+    "Click failed (role:gateway): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Gateway Collect receipt/i }).first()\u001b[22m\n",
+    "Click failed (light-mode): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Switch to light mode' }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" title=\"Switch to light mode\" aria-label=\"Switch to light mode\" class=\"press grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line bg-raised text-muted transition-colors hover:border-line-strong hover:text-ink \">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+    "Capturing bank mobile-412x915",
+    "Capturing bank tablet-768x1024",
+    "Capturing bank tablet-landscape-1024x768",
+    "Capturing bank laptop-1280x800",
+    "Capturing bank desktop-1440x900",
+    "Click failed (close-spend-dialog): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Close dialog' }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"space-y-4\">…</div> from <div class=\"relative flex max-h-[90vh] w-full flex-col overflow-hidden rounded-t-4xl border border-line bg-surface shadow-dock sm:rounded-4xl sm:max-w-md animate-[sheet-up_0.32s_cubic-bezier(0.22,1,0.36,1)_both]\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"space-y-4\">…</div> from <div class=\"relative flex max-h-[90vh] w-full flex-col overflow-hidden rounded-t-4xl border border-line bg-surface shadow-dock sm:rounded-4xl sm:max-w-md animate-[sheet-up_0.32s_cubic-bezier(0.22,1,0.36,1)_both]\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"space-y-4\">…</div> from <div class=\"relative flex max-h-[90vh] w-full flex-col overflow-hidden rounded-t-4xl border border-line bg-surface shadow-dock sm:rounded-4xl sm:max-w-md animate-[sheet-up_0.32s_cubic-bezier(0.22,1,0.36,1)_both]\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n",
+    "Click failed (switch-role): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Switch terminal role' }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" title=\"Switch terminal role\" aria-label=\"Switch terminal role\" class=\"press grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line bg-raised text-muted transition-colors hover:border-line-strong hover:text-ink \">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+    "Click failed (role:merchant): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Merchant Raise invoices/i }).first()\u001b[22m\n",
+    "Click failed (digit-2): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '2', exact: true }).first()\u001b[22m\n",
+    "Click failed (digit-0): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '0', exact: true }).first()\u001b[22m\n",
+    "Click failed (digit-0): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '0', exact: true }).first()\u001b[22m\n",
+    "Click failed (digit-0): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '0', exact: true }).first()\u001b[22m\n",
+    "Click failed (create-invoice): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Create invoice QR' }).first()\u001b[22m\n",
+    "Click failed (merchant-receipts): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Receipts', exact: true }).first()\u001b[22m\n",
+    "Click failed (merchant-sync): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Sync & relay', exact: true }).first()\u001b[22m\n",
+    "Click failed (switch-role): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Switch terminal role' }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" title=\"Switch terminal role\" aria-label=\"Switch terminal role\" class=\"press grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line bg-raised text-muted transition-colors hover:border-line-strong hover:text-ink \">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+    "Click failed (role:gateway): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Gateway Collect receipt/i }).first()\u001b[22m\n",
+    "Click failed (light-mode): locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Switch to light mode' }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" title=\"Switch to light mode\" aria-label=\"Switch to light mode\" class=\"press grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line bg-raised text-muted transition-colors hover:border-line-strong hover:text-ink \">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button type=\"button\" aria-label=\"Close dialog\" class=\"absolute inset-0 bg-[rgb(var(--scrim)/var(--scrim-a))] backdrop-blur-[3px] anim-fade\"></button> from <div role=\"dialog\" aria-modal=\"true\" aria-label=\"Authorisation token\" class=\"fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n",
+    "Capturing bank desktop-1920x1080",
+    "Capturing client auth mobile-390x844",
+    "Capturing client auth desktop-1440x900"
+  ]
+}

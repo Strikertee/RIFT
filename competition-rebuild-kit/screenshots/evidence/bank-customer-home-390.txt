@@ -1,0 +1,124 @@
+- banner:
+  - text: Devions Bank
+  - status: Online
+  - button "Mute sounds" [pressed]:
+    - img
+  - button "Switch to light mode":
+    - img
+  - button "Switch terminal role":
+    - img
+  - button "Open profile": TB
+- main:
+  - heading "Good evening, Treasure" [level=1]
+  - paragraph: Your money, simply managed.
+  - paragraph: Total balance
+  - button "Hide balances":
+    - img
+  - text: ₦50,000.00
+  - paragraph:
+    - img
+    - text: Available online
+  - text: ₦50,000
+  - paragraph:
+    - img
+    - text: RIFT offline
+  - text: ₦0 DEVIONS PLATINUM •••• 4771
+  - button "Send":
+    - img
+    - text: Send
+  - button "Receive":
+    - img
+    - text: Receive
+  - button "Lock":
+    - img
+    - text: Lock
+  - heading "Quick services" [level=2]
+  - button "See all":
+    - text: See all
+    - img
+  - button "Airtime":
+    - img
+    - text: Airtime
+  - button "Data":
+    - img
+    - text: Data
+  - button "Electricity":
+    - img
+    - text: Electricity
+  - button "TV":
+    - img
+    - text: TV
+  - button "More":
+    - img
+    - text: More
+  - heading "Cash flow" [level=2]
+  - paragraph: Demo analytics · last 7 days
+  - button "Week" [pressed]
+  - button "Month"
+  - paragraph: Money in
+  - paragraph: ₦38,400
+  - paragraph: Money out
+  - paragraph: ₦31,100
+  - paragraph: Net
+  - paragraph: +₦7,300
+  - img "Cash flow chart"
+  - text: Mon Tue Wed Thu Fri Sat Sun Peak value ₦10,502
+  - heading "Spending mix" [level=2]
+  - text: November
+  - 'img "Spent: ₦48.7k"'
+  - paragraph: Spent
+  - paragraph: ₦48.7k
+  - list:
+    - listitem: Food & market ₦18,400 38%
+    - listitem: Transport ₦9,600 20%
+    - listitem: Bills & utilities ₦7,700 16%
+    - listitem: Airtime & data ₦4,500 9%
+    - listitem: Transfers ₦8,500 17%
+  - img
+  - heading "Pay without network" [level=2]
+  - paragraph: Lock funds once, then spend over QR with zero connectivity.
+  - button "Open RIFT":
+    - text: Open RIFT
+    - img
+  - heading "Recent activity" [level=2]
+  - button "See all":
+    - text: See all
+    - img
+  - img
+  - paragraph: Transfer to Ada O.
+  - paragraph: Today, 09:41
+  - paragraph: −₦8,500
+  - img
+  - paragraph: Payment received
+  - paragraph: Yesterday, 16:20
+  - paragraph: +₦25,000
+  - img
+  - paragraph: Electricity — IKEDC
+  - paragraph: 18 Nov, 08:15
+  - paragraph: −₦4,200
+  - img
+  - paragraph: Offline payment — Mama Nkechi Foods
+  - paragraph: 17 Nov, 13:02
+  - paragraph: −₦1,800
+  - img
+  - paragraph: Airtime — MTN
+  - paragraph: 16 Nov, 19:44
+  - paragraph: −₦1,000
+- navigation "Primary":
+  - list:
+    - listitem:
+      - button "Home":
+        - img
+        - text: Home
+    - listitem:
+      - button "Loans":
+        - img
+        - text: Loans
+    - listitem:
+      - button "RIFT":
+        - img
+        - text: RIFT
+    - listitem:
+      - button "Me":
+        - img
+        - text: Me

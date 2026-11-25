@@ -1,0 +1,16 @@
+- text: Devions Bank SIMULATED CORE · OFFLINE-FIRST
+- heading "One protocol. Three terminals." [level=1]
+- paragraph: RIFT keeps money moving when the network doesn't. Choose the terminal this device plays — you can switch anytime, and every role shares the same cryptographic ledger.
+- button "Customer Bank, lock an offline allocation and pay over QR with zero network. Enter terminal":
+  - img
+  - text: Customer Bank, lock an offline allocation and pay over QR with zero network. Enter terminal
+  - img
+- button "Merchant Raise invoices, verify signed tokens offline and hold receipts for settlement. Enter terminal":
+  - img
+  - text: Merchant Raise invoices, verify signed tokens offline and hold receipts for settlement. Enter terminal
+  - img
+- button "Gateway Collect receipt batches from terminals and relay them to RIFT Core. Enter terminal":
+  - img
+  - text: Gateway Collect receipt batches from terminals and relay them to RIFT Core. Enter terminal
+  - img
+- paragraph: Hackathon demonstration · simulated value only · Ed25519 authorisations, store-and-forward settlement.

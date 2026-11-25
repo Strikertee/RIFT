@@ -1,0 +1,120 @@
+- banner:
+  - text: Devions Bank
+  - status: Online
+  - button "Mute sounds" [pressed]:
+    - img
+  - button "Switch to light mode":
+    - img
+  - button "Switch terminal role":
+    - img
+  - button "Open profile": TB
+- main:
+  - heading "RIFT Offline" [level=1]
+  - paragraph: Lock funds now. Spend with zero network.
+  - img
+  - paragraph: Available offline
+  - text: READY ₦8,000.00
+  - paragraph: ₦8,000 / ₦50,000 limit
+  - img
+  - paragraph: 16%
+  - paragraph: allocated
+  - button "Spend offline via QR":
+    - img
+    - text: Spend offline via QR
+  - img
+  - heading "Lock for offline" [level=2]
+  - paragraph: Issues a signed Offline Allocation Certificate.
+  - text: Amount to lock ₦
+  - textbox "Amount to lock ₦ Maximum ₦50,000 total · ₦42,000 of your limit remaining · Available ₦40,000":
+    - /placeholder: "0.00"
+  - text: Maximum ₦50,000 total · ₦42,000 of your limit remaining · Available ₦40,000
+  - button "₦5,000"
+  - button "₦10,000"
+  - button "₦20,000"
+  - button "Max"
+  - button "Lock funds":
+    - text: Lock funds
+    - img
+  - button "Return":
+    - img
+    - text: Return
+  - img
+  - heading "Allocation certificate" [level=2]
+  - paragraph: Ed25519 issuer-signed OAC
+  - button "Reconcile":
+    - img
+    - text: Reconcile
+  - text: OAC oac_f38a46fe-1831-... Remaining / allocated ₦8,000 / ₦10,000 Sequence counter 1 Expires 27 Nov, 18:58
+  - heading "How RIFT works" [level=2]
+  - list:
+    - listitem:
+      - text: "1"
+      - paragraph:
+        - img
+        - text: Lock an allocation
+      - paragraph: RIFT Core (or the simulated issuer) signs an Offline Allocation Certificate for up to ₦50,000.
+    - listitem:
+      - text: "2"
+      - paragraph:
+        - img
+        - text: Pay over QR
+      - paragraph: Your device signs an Ed25519 authorisation bound to the merchant invoice. No data, no Wi-Fi, no problem.
+    - listitem:
+      - text: "3"
+      - paragraph:
+        - img
+        - text: Auto-reconcile
+      - paragraph: Merchant or gateway relays the receipt; Core verifies, anti-replays and settles on reconnect.
+  - heading "RIFT activity" [level=2]
+  - img
+  - paragraph: Offline payment — Mama Nkechi Foods
+  - paragraph: Just now
+  - paragraph: ₦2,000
+  - img
+  - paragraph: Locked for offline spending
+  - paragraph: Just now
+  - paragraph: ₦10,000
+  - img
+  - paragraph: Offline payment — Mama Nkechi Foods
+  - paragraph: 17 Nov, 13:02
+  - paragraph: ₦1,800
+  - img
+  - paragraph: Returned to online balance
+  - paragraph: 17 Nov, 18:40
+  - paragraph: ₦8,200
+- navigation "Primary":
+  - list:
+    - listitem:
+      - button "Home":
+        - img
+        - text: Home
+    - listitem:
+      - button "Loans":
+        - img
+        - text: Loans
+    - listitem:
+      - button "RIFT":
+        - img
+        - text: RIFT
+    - listitem:
+      - button "Me":
+        - img
+        - text: Me
+- dialog "Authorisation token":
+  - button "Close dialog"
+  - heading "Authorisation token" [level=2]
+  - button "Close":
+    - img
+  - img
+  - paragraph: R2.AsVrc9ebnilzD0hljU0A02jzikb-GDEuv8UodzrU0Xf4zhJVYQ-KoIx3q4pYLs5mJMRYXwpwYi43iBF-L2hnToIAAAABAAAAAw1Av2j5ADbBfyVrBdBNAAAAD0JAawXQSGsJxMgBIYggpn8idRDVqL6owUz7ifs9gxIFaCktHtdodOciUGbrHcT3sq0UsTdWVtQNDUH8UYnpYqA1t6XKS4TQoClEdTtERhjocBZmUxT76JGOPwTYlWCjQMJqGVEw6LmII8MMHur9AsNbaJFGZUSoXqufZ9QSV-DPKOOWJmjdPzlFTNg6nfHlBpf97qPn9euopvu_khadGX3ZAQgUgwZqDmOWBw
+  - paragraph: Mama Nkechi Foods
+  - text: ₦2,000
+  - paragraph: tx_c56b73d7-9b9e-2973-...
+  - paragraph:
+    - img
+    - img
+    - text: Ed25519-signed · waiting for merchant scan…
+  - button "Copy token":
+    - img
+    - text: Copy token
+  - button "Done for now"
