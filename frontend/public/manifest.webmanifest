@@ -1,0 +1,12 @@
+{
+  "name": "Devions Bank · RIFT",
+  "short_name": "Devions",
+  "description": "Offline-first payments with cryptographic authorisations. Simulated value only.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0F0D",
+  "theme_color": "#0A0F0D",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
